@@ -1,0 +1,284 @@
+.reviews-section {
+  padding: 120px 0;
+
+  background: var(--cream);
+
+  position: relative;
+}
+
+.reviews-container {
+  width: min(1200px, calc(100% - 40px));
+
+  margin: auto;
+}
+
+/* ==============================
+   HEADING
+============================== */
+
+.reviews-heading {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.reviews-heading .section-label {
+  justify-content: center;
+}
+
+.reviews-heading .section-title span {
+  display: block;
+
+  color: var(--red);
+}
+
+/* ==============================
+   REVIEWS GRID
+============================== */
+
+.reviews-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+/* ==============================
+   REVIEW CARD
+============================== */
+
+.review-card {
+  padding: 28px;
+
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(70, 35, 20, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 40px rgba(70, 35, 20, 0.1);
+}
+
+.review-stars {
+  color: #d89b18;
+
+  font-size: 15px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 18px;
+}
+
+.review-text {
+  min-height: 95px;
+
+  color: var(--brown-light);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+/* ==============================
+   AUTHOR
+============================== */
+
+.review-author {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding-top: 18px;
+
+  margin-top: 18px;
+
+  border-top: 1px solid var(--border);
+}
+
+.review-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(189, 36, 21, 0.1);
+
+  color: var(--red);
+
+  font-family: Georgia, serif;
+
+  font-weight: 700;
+}
+
+.review-author h4 {
+  color: var(--brown);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.review-author span {
+  color: #9a877a;
+
+  font-size: 10px;
+}
+
+/* ==============================
+   FACEBOOK BOX
+============================== */
+
+.facebook-review-box {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 45px;
+
+  padding: 30px 35px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff8ef,
+      #f8ead9
+    );
+
+  border: 1px solid var(--border);
+}
+
+.facebook-label {
+  color: var(--red);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.facebook-review-box h3 {
+  margin-top: 6px;
+
+  color: var(--brown);
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+}
+
+.facebook-review-box p {
+  margin-top: 5px;
+
+  color: var(--brown-light);
+
+  font-size: 13px;
+}
+
+.facebook-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 20px;
+
+  border-radius: 30px;
+
+  background: #1877f2;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition: 0.25s ease;
+}
+
+.facebook-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(24, 119, 242, 0.2);
+}
+
+.facebook-button span {
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 900px) {
+
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .reviews-section {
+    padding: 80px 0;
+  }
+
+  .reviews-container {
+    width: calc(100% - 28px);
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-text {
+    min-height: auto;
+  }
+
+  .facebook-review-box {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 25px;
+  }
+
+}

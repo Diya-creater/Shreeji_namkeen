@@ -1,0 +1,737 @@
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 90px);
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px 0;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(224, 86, 20, 0.08),
+      transparent 30%
+    ),
+    var(--cream);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  left: -180px;
+  bottom: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(189, 36, 21, 0.05);
+}
+
+
+/* =========================================
+   HERO CONTAINER
+========================================= */
+
+.hero-container {
+  width: min(1240px, calc(100% - 40px));
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   HERO LABEL
+========================================= */
+
+.hero-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  color: var(--red);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.hero-label::before {
+  content: "";
+
+  width: 35px;
+  height: 1px;
+
+  background: var(--orange);
+}
+
+
+/* =========================================
+   HERO HEADING
+========================================= */
+
+.hero h1 {
+  max-width: 680px;
+
+  color: var(--brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(48px, 6vw, 76px);
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  display: block;
+
+  color: var(--red);
+}
+
+
+/* =========================================
+   HERO DESCRIPTION
+========================================= */
+
+.hero-content > p {
+  max-width: 600px;
+
+  color: var(--brown-light);
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+
+/* Common button styles */
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;
+
+  padding: 0 27px;
+
+  border-radius: 30px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.primary-btn {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #bd2415,
+    #df4a0a
+  );
+
+  border: 2px solid #bd2415;
+
+  box-shadow:
+    0 10px 25px rgba(189, 36, 21, 0.20);
+}
+
+.primary-btn:hover {
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 30px rgba(189, 36, 21, 0.30);
+
+  background: linear-gradient(
+    135deg,
+    #a91f12,
+    #c93e08
+  );
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.secondary-btn {
+  color: var(--brown);
+
+  background: transparent;
+
+  border: 2px solid rgba(69, 35, 20, 0.35);
+}
+
+.secondary-btn:hover {
+  color: #ffffff;
+
+  background: var(--brown);
+
+  border-color: var(--brown);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(69, 35, 20, 0.20);
+}
+
+
+/* =========================================
+   BUTTON ACTIVE EFFECT
+========================================= */
+
+.primary-btn:active,
+.secondary-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   HERO HIGHLIGHTS
+========================================= */
+
+.hero-highlights {
+  display: flex;
+
+  gap: 35px;
+
+  margin-top: 45px;
+
+  flex-wrap: wrap;
+}
+
+.highlight {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.highlight > span {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(189, 36, 21, 0.1);
+
+  color: var(--red);
+
+  font-size: 14px;
+}
+
+.highlight strong {
+  display: block;
+
+  color: var(--brown);
+
+  font-size: 14px;
+}
+
+.highlight small {
+  display: block;
+
+  color: #806b5d;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   HERO IMAGE WRAPPER
+========================================= */
+
+.hero-image-wrapper {
+  position: relative;
+
+  min-height: 550px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image {
+  position: relative;
+
+  width: min(100%, 500px);
+
+  height: 560px;
+
+  border-radius: 240px 240px 30px 30px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 70px rgba(69, 35, 20, 0.2);
+
+  border: 8px solid rgba(255, 255, 255, 0.7);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   IMAGE DECORATION
+========================================= */
+
+.hero-image-decoration {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border: 1px solid rgba(189, 36, 21, 0.2);
+
+  border-radius: 50%;
+
+  transform: translate(35px, 30px);
+}
+
+
+/* =========================================
+   HERO BADGE
+========================================= */
+
+.hero-badge {
+  position: absolute;
+
+  left: 0;
+
+  bottom: 65px;
+
+  width: 145px;
+  height: 145px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #bd2415,
+    #df4a0a
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 15px 35px rgba(189, 36, 21, 0.25);
+
+  border: 6px solid var(--cream);
+
+  z-index: 3;
+}
+
+.hero-badge span {
+  font-family: Georgia, serif;
+
+  font-size: 32px;
+
+  line-height: 1;
+}
+
+.hero-badge p {
+  margin-top: 8px;
+
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 50px;
+  }
+
+  .hero-content > p {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+  .hero-label {
+    justify-content: center;
+  }
+
+  .hero-buttons,
+  .hero-highlights {
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    min-height: 500px;
+  }
+
+  .hero-badge {
+    left: calc(50% - 250px);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: auto;
+
+    padding: 55px 0;
+  }
+
+  .hero-container {
+    width: calc(100% - 28px);
+
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-content > p {
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+
+  /* Mobile Buttons */
+
+  .hero-buttons {
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 5px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    font-size: 13px;
+  }
+
+
+  /* Highlights */
+
+  .hero-highlights {
+    gap: 18px;
+
+    justify-content: center;
+  }
+
+
+  /* Hero Image */
+
+  .hero-image-wrapper {
+    min-height: 420px;
+  }
+
+  .hero-image {
+    width: min(100%, 380px);
+
+    height: 430px;
+
+    border-radius:
+      200px
+      200px
+      25px
+      25px;
+  }
+
+  .hero-image-decoration {
+    width: 380px;
+
+    height: 380px;
+  }
+
+
+  /* Badge */
+
+  .hero-badge {
+    width: 110px;
+
+    height: 110px;
+
+    left: 0;
+
+    bottom: 25px;
+  }
+
+  .hero-badge span {
+    font-size: 25px;
+  }
+
+  .hero-badge p {
+    font-size: 11px;
+  }
+
+
+  /* Animations */
+
+  .hero-content {
+    animation:
+      heroContent
+      0.9s
+      ease
+      both;
+  }
+
+  .hero-image {
+    animation:
+      heroImage
+      1s
+      ease
+      0.15s
+      both;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-content > p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+
+    padding: 0 18px;
+  }
+
+  .hero-image-wrapper {
+    min-height: 370px;
+  }
+
+  .hero-image {
+    height: 380px;
+
+    border-radius:
+      180px
+      180px
+      22px
+      22px;
+  }
+
+  .hero-image-decoration {
+    width: 330px;
+
+    height: 330px;
+  }
+
+  .hero-badge {
+    width: 95px;
+
+    height: 95px;
+
+    left: 5px;
+
+    bottom: 20px;
+  }
+
+  .hero-badge span {
+    font-size: 22px;
+  }
+
+  .hero-badge p {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================
+   HERO ANIMATIONS
+========================================= */
+
+@keyframes heroContent {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes heroImage {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(30px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0)
+      scale(1);
+  }
+}

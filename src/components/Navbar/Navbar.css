@@ -1,0 +1,326 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background:
+    rgba(255, 250, 242, 0.96);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 8px 25px rgba(70, 35, 20, 0.08);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  height: 80px;
+
+  margin: 0 auto;
+
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =================================
+   LOGO
+================================= */
+
+.navbar-logo {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.logo-text strong {
+  color: var(--brown);
+
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+
+  letter-spacing: 1px;
+}
+
+.logo-text span {
+  margin-top: 4px;
+
+  color: var(--red);
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+/* =================================
+   DESKTOP NAV
+================================= */
+
+.desktop-nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+.desktop-nav a {
+  position: relative;
+
+  color: var(--brown);
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: color 0.25s ease;
+}
+
+.desktop-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--red);
+
+  transition: width 0.25s ease;
+}
+
+.desktop-nav a:hover {
+  color: var(--red);
+}
+
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+.desktop-nav .nav-contact {
+  padding: 10px 17px;
+
+  border-radius: 25px;
+
+  background: var(--red);
+
+  color: white;
+}
+
+.desktop-nav .nav-contact::after {
+  display: none;
+}
+
+.desktop-nav .nav-contact:hover {
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+/* =================================
+   MOBILE MENU BUTTON
+================================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 9px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  background: white;
+
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  margin: 5px 0;
+
+  background: var(--brown);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+/* =================================
+   MOBILE NAV
+================================= */
+
+.mobile-nav {
+  display: none;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1050px) {
+
+  .desktop-nav {
+    gap: 15px;
+  }
+
+  .desktop-nav a {
+    font-size: 11px;
+  }
+
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 800px) {
+
+  .navbar-container {
+    width: calc(100% - 28px);
+
+    height: 70px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-nav {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 10px 20px 20px;
+
+    background:
+      rgba(255, 250, 242, 0.98);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+      0 15px 30px rgba(70, 35, 20, 0.1);
+
+    transform:
+      translateY(-20px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+      all 0.3s ease;
+  }
+
+  .mobile-nav.open {
+    transform:
+      translateY(0);
+
+    opacity: 1;
+
+    visibility: visible;
+  }
+
+  .mobile-nav a {
+    padding: 15px 5px;
+
+    border-bottom:
+      1px solid var(--border);
+
+    color: var(--brown);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-nav a:hover {
+    color: var(--red);
+  }
+
+/* =========================
+   NAVBAR LOGO
+========================= */
+
+.navbar-logo-image {
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+ @media (max-width: 768px) {
+
+  .navbar-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .navbar-logo-image {
+    width: 55px;
+    height: 55px;
+  }
+
+}
+
+}
