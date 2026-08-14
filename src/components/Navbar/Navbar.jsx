@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import "./Navbar.css";
 
 function Navbar() {
@@ -56,11 +55,7 @@ function Navbar() {
           className="navbar-logo"
           onClick={closeMenu}
         >
-          <img
-            src="/images/logo/shreeji-logo.png"
-            alt="Shreeji Namkeens"
-            className="navbar-logo-image"
-          />
+          <img src={`${import.meta.env.BASE_URL}images/logo/logo.png`} />
         </a>
 
         {/* Desktop Navigation */}
